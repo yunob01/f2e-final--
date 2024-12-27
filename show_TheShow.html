@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/computer.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <title>K-POP MUSIC CHART</title>
+</head>
+
+<body>
+    <!-- stars -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <header>
+        <nav class="nav" id="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="img/logo.PNG" alt="LOGO"></a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item-hide"><a href="index.html" class="nav-link">首頁</a></li>
+                    <li class="nav-item"><a href="show.html" class="nav-link">音樂節目</a></li>
+                    <li class="nav-item"><a href="vote.html" class="nav-link">投票教學</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><img src="img/logo.PNG" alt="Center Logo"
+                                class="nav-center-logo"></a>
+                    </li>
+                    <li class="nav-item"><a href="award.html" class="nav-link">年末專區</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">關於我們</a></li>
+                </ul>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+
+        <section class="container">
+            <img src="img/背景.png" alt="background">
+            <div class="title">
+                <h1>音樂節目</h1>
+                <h2>THE SHOW</h2>
+            </div>
+        </section>
+        <div class="scroll">
+            <p>SCROLL</p>
+            <a href="#time"><img src="img/arrow.png"></a>
+        </div>
+    </header>
+
+
+    <div class="main-container" id="time">
+        <h1>節目介紹</h1>
+        <div class="box-introduction">
+            <a href="https://programs.sbs.co.kr/sbsm/theshow/board/58359?cmd=view&page=1&board_no=4715&board_notice=Y">
+                <img src="img/LOGO_TheShow.png" alt="the show_logo" class="box-introduction-logo">
+            </a>
+            <div class="box-introduction-text">
+                <p>
+                    ✦ 音放播出時間：每週二 17:00 (台灣時間) <br>
+                    ✦ 獎項設置：THE SHOW Choice (冠軍) <br>
+                    ✦ 投票 App：STAR PLANET <br>
+                    ✦ MC：肖俊、刑準、Nana
+                </p>
+            </div>
+        </div>
+
+        <h1>成績計算方式</h1>
+        <div id="pieChart" class="chart"></div>
+
+
+        <h1>歷年冠軍榜</h1>
+        <div class="box-champion">
+            <div class="box-champion-card">
+                <a href="#">
+                    <p>2024</p>
+                    <img src="img/The Show_2024.jpg" alt="the show mc_2024">
+                </a>
+            </div>
+            <div class="box-champion-card">
+                <a href="#">
+                    <p>2023</p>
+                    <img src="img/The Show_2023.jpg" alt="the show mc_2023">
+                </a>
+            </div>
+            <div class="box-champion-card">
+                <a href="#">
+                    <p>2022</p>
+                    <img src="img/The Show_2022.png" alt="the show mc_2022">
+                </a>
+            </div>
+        </div>
+        <div class="more">
+            <p>點我看更多</p>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="social">
+            <a href="#"><img src="img/icon_instagram.png"></a>
+            <a href="#"><img src="img/icon_facebook.png"></a>
+            <a href="#"><img src="img/icon_youtube.png"></a>
+        </div>
+        <p>Copyright © YUNOB ｜ BLACKBEAR</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/computer.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <title>K-POP MUSIC CHART</title>
+</head>
+
+<body>
+
+    <!-- stars -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <header>
+        <nav class="nav" id="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="img/logo.PNG" alt="LOGO"></a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item-hide"><a href="index.html" class="nav-link">首頁</a></li>
+                    <li class="nav-item"><a href="show.html" class="nav-link">音樂節目</a></li>
+                    <li class="nav-item"><a href="vote.html" class="nav-link">投票教學</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><img src="img/logo.PNG" alt="Center Logo"
+                                class="nav-center-logo"></a>
+                    </li>
+                    <li class="nav-item"><a href="award.html" class="nav-link">年末專區</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">關於我們</a></li>
+                </ul>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+
+        <section class="container">
+            <img src="img/背景.png" alt="background">
+            <div class="title">
+                <h1>年末專區</h1>
+                <h2>GOLDEN DISC AWARDS</h2>
+            </div>
+        </section>
+        <div class="scroll">
+            <p>SCROLL</p>
+            <a href="#time"><img src="img/arrow.png"></a>
+        </div>
+    </header>
+
+
+    <div class="main-container" id="time">
+        <h1>金唱片獎<br>GOLDEN DISC AWARDS</h1>
+        <div class="golden-text">
+            <p>第39屆金唱片獎 in FUKUOKA<br>2025.01.04-05<br>MIZUHO PayPay DOME</p>
+            <div class="golden">
+                <img src="img/fukuoka.jpg">
+            </div>
+        </div>
+
+
+        <h1>主持陣容</h1>
+        <div class="golden-text">
+            <p>成始璄、文佳煐、ASTRO車銀優</p>
+            <div class="golden">
+                <img src="img/主持人.jpg">
+            </div>
+        </div>
+
+
+        <h1>出演陣容</h1>
+        <div class="golden-text">
+            <p>01.04 DAY1<br>(G)I-DLE、aespa、NewJeans、LE SSERAFIM、KISS OF LIFE、ILLIT、Crush、PROJECT7、TWS、BIBI、DAY6</p>
+            <div class="golden">
+                <img src="img/day1.png">
+            </div>
+            <div class="golden-text">
+                <p>01.05 DAY2<br>ZEROBASEONE、NCT WISH、TXT、SEVENTEEN、ENHYPEN、GFRIEND、IVE、宋雨琦、NOWADAYS、izna</p>
+                <div class="golden">
+                    <img src="img/day2.png">
+                </div>
+            </div>
+
+
+            <h1>獎項入圍</h1>
+            <div class="nominees">
+                <div class="nominees-card">
+                    <a href="#">
+                        <p>音源本賞</p>
+                        <img class="default" src="img/nominess.png">
+                        <img class="hover" src="img/nominess-hover.png">
+                    </a>
+                    <a href="#" class="icon-arrow">
+                        <img src="img/arrow-icon.png">
+                    </a>
+                </div>
+
+
+                <div class="nominees-card">
+                    <a href="#">
+                        <p>專輯本賞</p>
+                        <img class="default" src="img/nominess.png">
+                        <img class="hover" src="img/nominess-hover.png">
+                    </a>
+                    <a href="#" class="icon-arrow">
+                        <img src="img/arrow-icon.png">
+                    </a>
+                </div>
+
+
+                <div class="nominees-card">
+                    <a href="#">
+                        <p>年度新人獎</p>
+                        <img class="default" src="img/nominess.png">
+                        <img class="hover" src="img/nominess-hover.png">
+                    </a>
+                    <a href="#" class="icon-arrow">
+                        <img src="img/arrow-icon.png">
+                    </a>
+
+
+                </div>
+            </div>
+
+
+            <h1>最新影片</h1>
+            <div class="lastest-video">
+                <div class="image-container">
+                    <img src="img/album4.png" class="showimg active" alt="Golden Disc 1">
+                    <img src="img/album3.png" class="showimg" alt="Golden Disc 2">
+                    <img src="img/album2.png" class="showimg" alt="Golden Disc 3">
+                    <img src="img/album1.png" class="showimg" alt="Golden Disc 4">
+                </div>
+                <div class="text-area">
+                    <a href="https://youtu.be/pfA_ntbLygk?si=g5tBVxwCi7KBRbCj">
+                        <div class="imenu">[第39屆金唱片]專輯類別提名4 <span class="date">2024.12.24</span></div>
+                    </a>
+                    <a href="https://youtu.be/YuDA9vtIa6M?si=PUF3rr7UepGmBDh3">
+                        <div class="imenu">[第39屆金唱片]專輯類別提名3 <span class="date">2024.12.24</span></div>
+                    </a>
+                    <a href="https://youtu.be/7LdN_fprMmQ?si=EsYBeLGLUQ0NanGh">
+                        <div class="imenu">[第39屆金唱片]專輯類別提名2 <span class="date">2024.12.24</span></div>
+                    </a>
+                    <a href="https://youtu.be/NWo5SFcSFAU?si=iPGzF5qRPMmQASLc">
+                        <div class="imenu">[第39屆金唱片]專輯類別提名1 <span class="date">2024.12.24</span></div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <a href="https://www.goldendisc.co.kr/en">
+                <div class="more">
+                    <p>點我看更多</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="social">
+            <a href="#"><img src="img/icon_instagram.png"></a>
+            <a href="#"><img src="img/icon_facebook.png"></a>
+            <a href="#"><img src="img/icon_youtube.png"></a>
+        </div>
+        <p>Copyright © YUNOB ｜ BLACKBEAR</p>
+    </footer>
+
+</body>
+
+</html>

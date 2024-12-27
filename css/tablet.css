@@ -1,0 +1,342 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* navigation style */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        /* LOGO 和選單對齊 */
+        align-items: center;
+        /* 垂直置中 */
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        z-index: 100;
+        padding: 0;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-center-logo {
+        height: 60px;
+        width: auto;
+        display: block;
+    }
+
+    /* 導航選單設置 */
+    .nav-list {
+        display: flex;
+        /* 項目默認水平排列 */
+        flex-direction: row;
+        /* 水平排列 */
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        /* 背景透明 */
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        top: 15px;
+        gap: 30px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav-link img {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .nav-item-hide {
+        display: none;
+    }
+
+    /* 漢堡選單圖示（隱藏） */
+    .navTrigger {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 36px;
+        margin: 0 0 10px;
+    }
+
+    .title h2 {
+        font-size: 16px;
+    }
+
+    .scroll p {
+        font-size: 16px;
+    }
+
+    .scroll img {
+        width: 60px;
+    }
+
+    /* footer style */
+    .social {
+        gap: 20px;
+    }
+
+    .social img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    /* 通用 */
+    .main-container h1 {
+        font-size: 24px;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+    /* index */
+    .show-item {
+        flex-direction: row;
+        /* 改為水平排列 */
+        height: 312px;
+    }
+
+    .show-item:nth-child(even) {
+        flex-direction: row-reverse;
+        /* 圖片在右，文字在左 */
+    }
+
+    .show-item img {
+        width: 300px;
+        height: auto;
+        padding: 0 25px;
+    }
+
+    .show-item p {
+        font-size: 24px;
+        padding: 0 25px;
+    }
+
+
+    /* show_TheShow style */
+    .box-introduction {
+        height: 250px;
+    }
+
+    .box-introduction-logo {
+        width: 250px;
+        height: auto;
+        padding: 10px 30px;
+    }
+
+    .box-introduction-text {
+        font-size: 14px;
+        max-width: 450px;
+    }
+
+    .box-champion-card {
+        width: 300px;
+        /* 固定卡片寬度 */
+        margin: 40px;
+        /* 卡片之間的垂直間距 */
+    }
+
+    .box-champion-card p {
+        font-size: 20px;
+    }
+
+    .chart {
+        width: 300px;
+        height: 300px;
+    }
+
+    .pieTip {
+        min-width: 150px;
+        max-width: 150px;
+        padding: 5px 18px 6px;
+        font-size: 14px;
+        transform: translate(-40%, 0);
+        /* 往右和往下移動 */
+    }
+
+    /* show_TheShow style */
+    .planet img {
+        width: 250px;
+        height: auto;
+    }
+
+    .planet h2 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .vote {
+        padding: 20px 0;
+    }
+
+    .vote-text p {
+        font-size: 14px;
+    }
+
+    .more {
+        font-size: 20px;
+        width: 220px;
+        margin: 120px auto 150px;
+    }
+
+    /* award_gda style */
+    .golden {
+        margin: 40px 70px 0;
+    }
+
+
+    .golden img {
+        margin-bottom: 50px;
+    }
+
+
+    .golden-text p {
+        font-size: 14px;
+    }
+
+    .nominees-card {
+        width: 280px;
+    }
+
+    .nominees-card p {
+        font-size: 18px;
+    }
+
+    .icon-arrow img {
+        width: 50px;
+        height: auto;
+    }
+
+    .lastest-video {
+        flex-direction: row;
+        /* 平板版: 圖片與文字橫向排列 */
+    }
+
+    .image-container {
+        flex: 1;
+        margin-right: 2.5%;
+        /* 圖片與文字區域的間距 */
+        margin-bottom: 0;
+        /* 平板版不需要上下間距 */
+        aspect-ratio: 16 / 9;
+        /* 確保圖片比例 */
+    }
+
+    .text-area {
+        flex: 1;
+        margin-left: 2.5%;
+        /* 保持與圖片的對稱間距 */
+        margin-top: 0;
+    }
+
+    .imenu {
+        font-size: 14px;
+    }
+
+    .imenu:hover~.image-container img {
+        opacity: 0;
+        /* 移除所有圖片 */
+    }
+
+    .imenu:nth-child(1):hover~.image-container img:nth-child(1),
+    .imenu:nth-child(2):hover~.image-container img:nth-child(2),
+    .imenu:nth-child(3):hover~.image-container img:nth-child(3),
+    .imenu:nth-child(4):hover~.image-container img:nth-child(4) {
+        opacity: 1;
+        /* 顯示對應的圖片 */
+    }
+
+    .date {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+
+    /* about style */
+    .about_us {
+        flex-direction: row;
+        /* 圖片和文字並排 */
+        align-items: center;
+        /* 圖片和文字垂直置中 */
+        justify-content: center;
+        /* 讓內容向左對齊 */
+    }
+
+    .us img {
+        width: 250px;
+        justify-content: left;
+    }
+
+    .introduction {
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .introduction h2 {
+        width: 350px;
+        font-size: 18px;
+    }
+
+    .introduction p {
+        font-size: 12px;
+    }
+
+}
+
+/* index 新增 */
+@media screen and (min-width: 768px) {
+    .coverflow-container {
+        width: 90%;
+        max-width: 900px;
+        perspective: 1000px;
+        /* 加強透視深度 */
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    .coverflow {
+        height: 250px;
+        /* 調整高度 */
+    }
+
+    .coverflow-item {
+        flex: 0 0 70%;
+        height: 230px;
+        width: 400px;
+        transform: scale(0.85) translateX(0) translateZ(-180px) rotateY(-25deg);
+    }
+
+    .coverflow-item.active {
+        transform: scale(1.1) translateX(0) translateZ(0) rotateY(0);
+    }
+
+    /* loading style */
+    .lamp-container {
+        gap: 40px;
+        /* 增加燈泡之間的間距 */
+    }
+
+
+    .circle {
+        width: 50px;
+        /* 增大燈泡尺寸 */
+        height: 50px;
+    }
+
+
+    .loading-screen h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+}

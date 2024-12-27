@@ -1,0 +1,1054 @@
+/* global style */
+html {
+    overflow-x: hidden;
+    /* 禁用橫向滾動條 */
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    font-family: 'Noto Serif JP', sans-serif;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+/* navigation style*/
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: transparent;
+}
+
+.nav-logo img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 50px;
+    width: auto;
+}
+
+.nav-logo img:hover {
+    height: 60px;
+    width: auto;
+}
+
+.nav.scrolled {
+    background-color: #1B2735;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    background-color: #1B2735;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.nav-list.active {
+    display: flex;
+    /* 當有 .active 類別時顯示選單 */
+}
+
+.nav-item,
+.nav-item-hide {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.nav-center-logo {
+    display: none;
+}
+
+/* 底線特效 */
+.nav-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 50%;
+    margin-left: -2px;
+    background-color: #c7a944;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 漢堡選單圖示 */
+.navTrigger {
+    display: block;
+    /* 漢堡選單按鈕預設顯示 */
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+.navTrigger i {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* 當漢堡選單被點擊後的動畫 */
+.navTrigger.active i:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navTrigger.active i:nth-child(2) {
+    opacity: 0;
+}
+
+.navTrigger.active i:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* title */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.title h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #353e4f;
+}
+
+.title h2 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 12px;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.scroll p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.scroll img {
+    width: 50px;
+}
+
+/* footer */
+footer {
+    background-color: #0c111a;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0;
+}
+
+
+
+/* 通用 */
+.main-container h1 {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* index */
+.show-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: #cbd0d6;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.show-item img {
+    width: 200px;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.show-item p {
+    font-size: 16px;
+    color: #353e4f;
+    text-decoration: none;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-weight: bold;
+    margin-top: -10px;
+    letter-spacing: 3px;
+}
+
+.show-item:hover {
+    background-color: #c7a944;
+}
+
+/* show style */
+.show-text {
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 40px;
+    margin-bottom: 150px;
+}
+
+.image-card {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.image-card img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 添加過渡動畫 */
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    /* 鼠標懸停時放大卡片 */
+    box-shadow: 0 8px 16px #353E4F;
+    /* 增加陰影 */
+}
+
+.image-card:active {
+    transform: scale(1.1);
+    /* 點擊時放大卡片 */
+    box-shadow: 0 12px 24px #353E4F;
+    /* 增加陰影 */
+}
+
+.image-card img {
+    max-width: 100%;
+    /* 圖片最大寬度為 100% */
+    max-height: 100%;
+    /* 圖片最大高度為 100% */
+    object-fit: contain;
+    /* 保持圖片比例，適應容器 */
+    display: block;
+    /* 確保圖片作為塊級元素 */
+    margin: 0;
+    /* 移除圖片外邊距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 添加過渡動畫 */
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+    /* 懸停時放大圖片 */
+    box-shadow: 10px 10px 20px #353E4F;
+    /* 為圖片添加陰影 */
+}
+
+.image-card:active img {
+    transform: scale(1.2);
+    /* 點擊時放大圖片 */
+    box-shadow: 15px 15px 30px #353E4F;
+    /* 增加陰影效果 */
+}
+
+/* show_TheShow style */
+.box-introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.box-introduction-logo {
+    width: 200px;
+    height: auto;
+    padding: 0 20px;
+}
+
+.box-introduction-logo:hover {
+    transform: scale(1.2);
+}
+
+.box-introduction-text {
+    display: flex;
+    align-items: center;
+    background-color: #cbd0d6;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #353e4f;
+    font-size: 12px;
+}
+
+.box-champion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+
+.box-champion-card {
+    text-align: center;
+    width: 250px;
+    /* 固定卡片寬度 */
+    margin: 30px;
+    /* 卡片之間的垂直間距 */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box-champion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box-champion-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box-champion-card p {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.box-champion-card:hover p {
+    background-color: #1B2735;
+    /* 背景變為深色 */
+    color: #fff;
+    /* 文字變為白色 */
+}
+
+.box-champion-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* chart */
+.chart {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 水平與垂直居中 */
+    position: relative;
+    margin: 0 auto;
+    /* 確保父容器在頁面內居中 */
+}
+
+.pieTip {
+    position: absolute;
+    min-width: 100px;
+    max-width: 100px;
+    padding: 5px 18px 6px;
+    border-radius: 2px;
+    background: #c9ced7;
+    color: #1B2735;
+    /* 修改字體顏色 */
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+    transform: translate(-10%, 0);
+    /* 往右和往下移動 */
+    pointer-events: none;
+}
+
+.pieTip:after {
+    position: absolute;
+    bottom: -6px;
+    content: "";
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 6px solid #c9ced7;
+    line-height: 0;
+}
+
+.chart path {
+    cursor: pointer;
+}
+
+
+
+
+/* show_TheShow style */
+.planet {
+    text-align: center;
+}
+
+.planet img {
+    width: 200px;
+    height: auto;
+}
+
+.planet h2 {
+    color: #F4F3EB;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.vote {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px 0;
+}
+
+.vote img {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.vote-text {
+    display: flex;
+    align-items: center;
+    background-color: #CBD0D6;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.vote-text p {
+    color: #353e4f;
+    font-size: 12px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.more {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 70px auto 80px;
+    padding: 5px;
+    width: 130px;
+    text-decoration: none;
+}
+
+.more:hover {
+    border: 2px solid #c9ced7;
+    background-color: #c9ced7;
+    color: #353e4f;
+}
+
+/* award_gda style */
+.golden {
+    text-align: center;
+    margin: 20px 50px 0;
+}
+
+
+.golden img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+
+.golden-text p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.nominees {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 40px 0;
+    padding: 20px 0;
+}
+
+
+.nominees-card {
+    position: relative;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+
+.nominees-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.nominees-card img.default {
+    z-index: 1;
+    opacity: 1;
+}
+
+
+.nominees-card img.hover {
+    z-index: 2;
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.nominees-card:hover img.default {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+
+.nominees-card:hover img.hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.nominees-card p {
+    position: absolute;
+    bottom: 10%;
+    left: 40px;
+    margin: 0;
+    font-size: 12px;
+    color: #c7a944;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 3;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+
+.nominees-card:hover p {
+    color: #aa9346;
+}
+
+
+.icon-arrow {
+    position: absolute;
+    bottom: 12%;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+
+.icon-arrow img {
+    width: 40px;
+    height: auto;
+}
+
+
+.icon-arrow:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+.image-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+
+.image-card img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.image-card:hover img {
+    transform: scale(1.2);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.image-card:active img {
+    transform: scale(1.3);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.image-card:hover,
+.image-card:active {
+    width: 300px;
+    height: 300px;
+}
+
+.image-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+
+.image-card img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.image-card:hover img {
+    transform: scale(1.2);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.image-card:active img {
+    transform: scale(1.3);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.image-card:hover,
+.image-card:active {
+    width: 300px;
+    height: 300px;
+}
+
+
+.lastest-video {
+    display: flex;
+    flex-direction: column;
+    /* 手機版: 垂直堆疊 */
+    padding: 0 10%;
+}
+
+.image-container {
+    width: 100%;
+    /* 手機版: 圖片區域全寬 */
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    /* 確保圖片比例 */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    /* 防止 opacity=0 時仍佔據資源 */
+    transition: opacity 0.8s ease, visibility 0s 0.8s;
+}
+
+.image-container img.active {
+    opacity: 1;
+    visibility: visible;
+    /* 確保 active 狀態時圖片可見 */
+    transition: opacity 0.8s ease;
+    /* 過渡更順暢 */
+}
+
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    /* 手機版: 文字區域全寬 */
+    margin-top: 30px;
+}
+
+.imenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
+    border-top: 0.5px solid #FFFFFF;
+    border-bottom: 0.5px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.imenu:hover {
+    color: #c7a944;
+}
+
+.imenu:hover~.image-container img {
+    opacity: 0;
+    /* 移除所有圖片 */
+}
+
+.imenu:nth-child(1):hover~.image-container img:nth-child(1),
+.imenu:nth-child(2):hover~.image-container img:nth-child(2),
+.imenu:nth-child(3):hover~.image-container img:nth-child(3),
+.imenu:nth-child(4):hover~.image-container img:nth-child(4) {
+    opacity: 1;
+    /* 顯示對應的圖片 */
+}
+
+.date {
+    font-size: 8px;
+    margin-left: 10px;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+
+
+/* about style */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    margin: 50px;
+}
+
+.about_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: ; */
+    padding: 20px;
+    gap: 10px;
+}
+
+.us img {
+    width: 200px;
+    height: auto;
+}
+
+.introduction {
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.introduction p {
+    font-size: 10px;
+    color: #ffffff;
+}
+
+/* INDEX 新增 */
+.coverflow-container {
+    width: 100%;
+    max-width: 100%;
+    perspective: 800px;
+    /* 減少透視深度以適配手機 */
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.coverflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    /* 調整為適合手機的高度 */
+    transition: transform 0.6s ease;
+}
+
+.coverflow-item {
+    flex: 0 0 80%;
+    /* 每個項目的寬度佔螢幕的 80% */
+    height: 180px;
+    width: auto;
+    position: absolute;
+    transition: transform 0.6s ease, opacity 0.6s ease, z-index 0.6s ease;
+    opacity: 0.5;
+    z-index: 0;
+    transform-origin: center;
+    transform: scale(0.8) translateX(0) translateZ(-150px) rotateY(-20deg);
+    /* 減少透視偏移效果 */
+}
+
+.coverflow-item.active {
+    transform: scale(1) translateX(0) translateZ(0) rotateY(0);
+    opacity: 1;
+    z-index: 2;
+}
+
+.coverflow-item iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* laoding style */
+/* laoding style */
+.hidden {
+    display: none;
+}
+
+
+/* 確保載入動畫覆蓋全頁並置中 */
+.animate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #353e4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* 確保位於最上層 */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.loading-screen h1 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* 初始透明度設為完全顯示 */
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 淡出時的樣式 */
+.animate.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+    /* 向上滑動隱藏 */
+    pointer-events: none;
+    /* 防止點擊 */
+}
+
+
+/* 燈泡與動畫設置保持不變 */
+.loading-screen {
+    text-align: center;
+}
+
+
+.lamp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.lamp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+    animation: glow 1.5s infinite ease-in-out;
+}
+
+
+.lamp:nth-child(2) .circle {
+    animation-delay: 0.3s;
+}
+
+
+.lamp:nth-child(3) .circle {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes glow {
+
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+
+/* 主要內容樣式 */
+#box-all {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+

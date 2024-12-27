@@ -1,0 +1,85 @@
+/* General Body Style */
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+body {
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  /* 使内容位于背景之上 */
+}
+
+/* 星空背景样式 */
+#stars,
+#stars2,
+#stars3 {
+  position: fixed;
+  /* 使用 fixed 定位，确保星星背景不会影响页面滚动 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* 覆盖整个视窗 */
+  height: 100vh;
+  /* 覆盖整个视窗 */
+  pointer-events: none;
+  /* 确保星星背景层不干扰鼠标事件 */
+  z-index: -1;
+  /* 保证星星在最底层 */
+}
+
+/* 星星层样式 */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: flicker 1.5s infinite alternate, moveUp 20s linear infinite;
+}
+
+.star.small {
+  width: 2px;
+  height: 2px;
+  animation-duration: 10s;
+}
+
+.star.medium {
+  width: 4px;
+  height: 4px;
+  animation-duration: 15s;
+}
+
+.star.large {
+  width: 6px;
+  height: 6px;
+  animation-duration: 20s;
+}
+
+/* Animations */
+@keyframes flicker {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+  }
+}
